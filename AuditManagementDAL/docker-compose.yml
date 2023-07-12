@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  auditmanagementdal:
+    image: ${DOCKER_REGISTRY-}auditmanagementdal
+    build:
+      context: .
+      dockerfile: AuditManagementDAL/Dockerfile

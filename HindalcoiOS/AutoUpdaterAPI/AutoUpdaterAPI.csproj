@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="EncryptorClass\**" />
+    <EmbeddedResource Remove="EncryptorClass\**" />
+    <None Remove="EncryptorClass\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="WinSCP" Version="5.21.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\AuditManagementAPI\AuditManagementDAL\AuditManagementDAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DevExpress.XtraEditors.v20.2">
+      <HintPath>bin\Debug\net5.0\DevExpress.XtraEditors.v20.2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

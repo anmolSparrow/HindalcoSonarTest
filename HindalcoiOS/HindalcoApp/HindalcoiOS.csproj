@@ -1,0 +1,1675 @@
+﻿
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5FA03988-8B25-4499-945F-BF17CBF55D99}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HindalcoiOS</RootNamespace>
+    <AssemblyName>HindalcoiOS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>HindalcoiOS.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>RMPCLIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="CADImport">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\CADImport.dll</HintPath>
+    </Reference>
+    <Reference Include="CheckComboBox">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\CheckComboBox.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v20.2" />
+    <Reference Include="DevExpress.Charts.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\source\repos\HindalcoApp\HindalcoApp\bin\Debug\DevExpress.Dashboard.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v20.2.Win, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\source\repos\HindalcoApp\HindalcoApp\bin\Debug\DevExpress.Dashboard.v20.2.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.2" />
+    <Reference Include="DevExpress.Data.v20.2" />
+    <Reference Include="DevExpress.DataAccess.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\source\repos\HindalcoApp\HindalcoApp\bin\Debug\DevExpress.DataAccess.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v20.2.UI, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\source\repos\HindalcoApp\HindalcoApp\bin\Debug\DevExpress.Office.v20.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.2.Drawing, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.2" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core" />
+    <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\source\repos\HindalcoApp\HindalcoApp\bin\Debug\DevExpress.XtraCharts.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v20.2.Extensions, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.2.Wizard, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\source\repos\HindalcoApp\HindalcoApp\bin\Debug\DevExpress.XtraCharts.v20.2.Wizard.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.2" />
+    <Reference Include="DevExpress.Printing.v20.2.Core" />
+    <Reference Include="DevExpress.XtraGauges.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\DevExpress 20.2\Components\Bin\Framework\DevExpress.XtraReports.v20.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <HintPath>..\packages\ExcelPackage.1.0.0\lib\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeOpenXml.Extends">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\OfficeOpenXml.Extends.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SparrowRMS">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\SparrowRMS.dll</HintPath>
+    </Reference>
+    <Reference Include="SparrowRMSControl">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\SparrowRMSControl.dll</HintPath>
+    </Reference>
+    <Reference Include="StarRatingControl">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\StarRatingControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\..\SparrowRMSDLLHindalCo\Custom DLL\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuditHind\AuditAreaView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditHind\AuditAreaView.Designer.cs">
+      <DependentUpon>AuditAreaView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditHind\AuditCalenderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditHind\AuditCalenderView.Designer.cs">
+      <DependentUpon>AuditCalenderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditHind\AuditCategoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditHind\AuditCategoryView.Designer.cs">
+      <DependentUpon>AuditCategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditHind\AuditGenOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditHind\AuditGenOption.Designer.cs">
+      <DependentUpon>AuditGenOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditHind\AuditManagementView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditHind\AuditManagementView.Designer.cs">
+      <DependentUpon>AuditManagementView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditHind\AuditMasterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditHind\AuditMasterView.Designer.cs">
+      <DependentUpon>AuditMasterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditHind\AuditMgmtDetailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditHind\AuditMgmtDetailView.Designer.cs">
+      <DependentUpon>AuditMgmtDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditHind\CAPALog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditHind\CAPALog.Designer.cs">
+      <DependentUpon>CAPALog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditHind\DepartmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditHind\DepartmentView.Designer.cs">
+      <DependentUpon>DepartmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuditHind\UserCategoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuditHind\UserCategoryView.Designer.cs">
+      <DependentUpon>UserCategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class Operation\ApplicationConstants.cs" />
+    <Compile Include="Class Operation\AuditReportInsertion.cs" />
+    <Compile Include="Class Operation\CadEntitiesTxt.cs" />
+    <Compile Include="Class Operation\CADProperty.cs" />
+    <Compile Include="Class Operation\GlobalDeclaration.cs" />
+    <Compile Include="Class Operation\IniFile.cs" />
+    <Compile Include="Class Operation\LogHelper.cs" />
+    <Compile Include="Class Operation\MaintenanceRMPCL.cs" />
+    <Compile Include="Class Operation\NodeCreator.cs" />
+    <Compile Include="Class Operation\SerializationXml.cs" />
+    <Compile Include="Class Operation\XMLImport.cs" />
+    <Compile Include="Configuration\BusinessClasses\AreaCreation.cs" />
+    <Compile Include="Configuration\BusinessClasses\GeneralConfig.cs" />
+    <Compile Include="Configuration\BusinessClasses\MailConfig.cs" />
+    <Compile Include="Configuration\BusinessClasses\OperationUnit.cs" />
+    <Compile Include="Configuration\View\GeneralConfigViewV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\View\GeneralConfigViewV2.Designer.cs">
+      <DependentUpon>GeneralConfigViewV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\View\AreaCreationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\View\AreaCreationView.Designer.cs">
+      <DependentUpon>AreaCreationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\View\EmployeeMasterFrmV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\View\EmployeeMasterFrmV2.Designer.cs">
+      <DependentUpon>EmployeeMasterFrmV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\View\MailConfigViewV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\View\MailConfigViewV2.Designer.cs">
+      <DependentUpon>MailConfigViewV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\View\OperationUnitViewV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuration\View\OperationUnitViewV2.Designer.cs">
+      <DependentUpon>OperationUnitViewV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connector FRM\ConnectionPropertyFrmV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connector FRM\ConnectionPropertyFrmV2.Designer.cs">
+      <DependentUpon>ConnectionPropertyFrmV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ServiceDAL.cs" />
+    <Compile Include="Dynamic Form\CadObjectDraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dynamic Form\CadObjectDraw.Designer.cs">
+      <DependentUpon>CadObjectDraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic Form\CallEventfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dynamic Form\CallEventfrm.Designer.cs">
+      <DependentUpon>CallEventfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic Form\EmployeeRatingFrmV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dynamic Form\EmployeeRatingFrmV2.Designer.cs">
+      <DependentUpon>EmployeeRatingFrmV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic Form\FileDocumentsFrmV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dynamic Form\FileDocumentsFrmV2.Designer.cs">
+      <DependentUpon>FileDocumentsFrmV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic Form\GlobalSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dynamic Form\GlobalSearch.Designer.cs">
+      <DependentUpon>GlobalSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic Form\PackageMachineV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dynamic Form\PackageMachineV2.designer.cs">
+      <DependentUpon>PackageMachineV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic Form\TrainingCalenderUploadV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dynamic Form\TrainingCalenderUploadV2.Designer.cs">
+      <DependentUpon>TrainingCalenderUploadV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dynamic Form\TrainingListFormV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dynamic Form\TrainingListFormV2.Designer.cs">
+      <DependentUpon>TrainingListFormV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Collection\AddNewServiceConnV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Collection\AddNewServiceConnV2.Designer.cs">
+      <DependentUpon>AddNewServiceConnV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Collection\FormatDownloader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Collection\FormatDownloader.Designer.cs">
+      <DependentUpon>FormatDownloader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Collection\Frm_GlobalEmloyeeHierarchyV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Collection\Frm_GlobalEmloyeeHierarchyV2.Designer.cs">
+      <DependentUpon>Frm_GlobalEmloyeeHierarchyV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form Collection\Plant360SplaceScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form Collection\Plant360SplaceScreen.Designer.cs">
+      <DependentUpon>Plant360SplaceScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm\DBConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm\DBConfiguration.Designer.cs">
+      <DependentUpon>DBConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm\frmManageUsersV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm\frmManageUsersV2.designer.cs">
+      <DependentUpon>frmManageUsersV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm\frmRecoverPasswordV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm\frmRecoverPasswordV2.designer.cs">
+      <DependentUpon>frmRecoverPasswordV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm\frmRegistrationV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm\frmRegistrationV2.designer.cs">
+      <DependentUpon>frmRegistrationV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm\LoginPanelV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm\LoginPanelV2.designer.cs">
+      <DependentUpon>LoginPanelV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Machine Edit Form\InputPropertyV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine Edit Form\InputPropertyV2.designer.cs">
+      <DependentUpon>InputPropertyV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Machine Edit Form\KeyCompoSpecsReaderV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine Edit Form\KeyCompoSpecsReaderV2.designer.cs">
+      <DependentUpon>KeyCompoSpecsReaderV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Machine Edit Form\KeySafetyComponentV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine Edit Form\KeySafetyComponentV2.designer.cs">
+      <DependentUpon>KeySafetyComponentV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Machine Edit Form\MachineEditDataV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine Edit Form\MachineEditDataV2.Designer.cs">
+      <DependentUpon>MachineEditDataV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Machine Edit Form\MachineEditKeyComponentV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine Edit Form\MachineEditKeyComponentV2.designer.cs">
+      <DependentUpon>MachineEditKeyComponentV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Machine Edit Form\OutputPropertyV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine Edit Form\OutputPropertyV2.designer.cs">
+      <DependentUpon>OutputPropertyV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Machine Edit Form\Tentive_PriceV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine Edit Form\Tentive_PriceV2.designer.cs">
+      <DependentUpon>Tentive_PriceV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DailyConsumption.cs" />
+    <Compile Include="Models\DailyProduction.cs" />
+    <Compile Include="Models\IncidentReport.cs" />
+    <Compile Include="Models\MonthlyProductionTarget.cs" />
+    <Compile Include="Models\NearMissUAUC.cs" />
+    <Compile Include="Models\ProductMaster.cs" />
+    <Compile Include="Models\UnitMaster.cs" />
+    <Compile Include="Multifloor\FloorConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Multifloor\FloorConfig.Designer.cs">
+      <DependentUpon>FloorConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Multifloor\mulCadLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Multifloor\mulCadLayout.Designer.cs">
+      <DependentUpon>mulCadLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Multifloor\PlantLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Multifloor\PlantLayout.Designer.cs">
+      <DependentUpon>PlantLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageMachine\PackageMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageMachine\PackageMachine.Designer.cs">
+      <DependentUpon>PackageMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageMachine\Remote_ConnectionV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageMachine\Remote_ConnectionV2.Designer.cs">
+      <DependentUpon>Remote_ConnectionV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParentWindow.designer.cs">
+      <DependentUpon>ParentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Safety Form list\JSAInputV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Safety Form list\JSAInputV2.Designer.cs">
+      <DependentUpon>JSAInputV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Safety Form list\ListSOPV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Safety Form list\ListSOPV2.Designer.cs">
+      <DependentUpon>ListSOPV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Safety Form list\LogDatacsV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Safety Form list\LogDatacsV2.Designer.cs">
+      <DependentUpon>LogDatacsV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Safety Form list\SafetyChecklistV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Safety Form list\SafetyChecklistV2.Designer.cs">
+      <DependentUpon>SafetyChecklistV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Safety Form list\SafetyDontsFrmV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Safety Form list\SafetyDontsFrmV2.Designer.cs">
+      <DependentUpon>SafetyDontsFrmV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempLicencing\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempLicencing\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TempLicencing\Licenseactivator.cs" />
+    <EmbeddedResource Include="AuditHind\AuditAreaView.resx">
+      <DependentUpon>AuditAreaView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditHind\AuditCalenderView.resx">
+      <DependentUpon>AuditCalenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditHind\AuditCategoryView.resx">
+      <DependentUpon>AuditCategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditHind\AuditGenOption.resx">
+      <DependentUpon>AuditGenOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditHind\AuditManagementView.resx">
+      <DependentUpon>AuditManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditHind\AuditMasterView.resx">
+      <DependentUpon>AuditMasterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditHind\AuditMgmtDetailView.resx">
+      <DependentUpon>AuditMgmtDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditHind\CAPALog.resx">
+      <DependentUpon>CAPALog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditHind\DepartmentView.resx">
+      <DependentUpon>DepartmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuditHind\UserCategoryView.resx">
+      <DependentUpon>UserCategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration\View\GeneralConfigViewV2.resx">
+      <DependentUpon>GeneralConfigViewV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration\View\AreaCreationView.resx">
+      <DependentUpon>AreaCreationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration\View\EmployeeMasterFrmV2.resx">
+      <DependentUpon>EmployeeMasterFrmV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration\View\MailConfigViewV2.resx">
+      <DependentUpon>MailConfigViewV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuration\View\OperationUnitViewV2.resx">
+      <DependentUpon>OperationUnitViewV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connector FRM\ConnectionPropertyFrmV2.resx">
+      <DependentUpon>ConnectionPropertyFrmV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dynamic Form\CadObjectDraw.resx">
+      <DependentUpon>CadObjectDraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dynamic Form\CallEventfrm.resx">
+      <DependentUpon>CallEventfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dynamic Form\EmployeeRatingFrmV2.resx">
+      <DependentUpon>EmployeeRatingFrmV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dynamic Form\FileDocumentsFrmV2.resx">
+      <DependentUpon>FileDocumentsFrmV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dynamic Form\GlobalSearch.resx">
+      <DependentUpon>GlobalSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dynamic Form\PackageMachineV2.resx">
+      <DependentUpon>PackageMachineV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dynamic Form\TrainingCalenderUploadV2.resx">
+      <DependentUpon>TrainingCalenderUploadV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dynamic Form\TrainingListFormV2.resx">
+      <DependentUpon>TrainingListFormV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Collection\AddNewServiceConnV2.resx">
+      <DependentUpon>AddNewServiceConnV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Collection\FormatDownloader.resx">
+      <DependentUpon>FormatDownloader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Collection\Frm_GlobalEmloyeeHierarchyV2.resx">
+      <DependentUpon>Frm_GlobalEmloyeeHierarchyV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form Collection\Plant360SplaceScreen.resx">
+      <DependentUpon>Plant360SplaceScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm\DBConfiguration.resx">
+      <DependentUpon>DBConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm\frmManageUsersV2.resx">
+      <DependentUpon>frmManageUsersV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm\frmRecoverPasswordV2.resx">
+      <DependentUpon>frmRecoverPasswordV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm\frmRegistrationV2.resx">
+      <DependentUpon>frmRegistrationV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm\LoginPanelV2.resx">
+      <DependentUpon>LoginPanelV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Machine Edit Form\InputPropertyV2.resx">
+      <DependentUpon>InputPropertyV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Machine Edit Form\KeyCompoSpecsReaderV2.resx">
+      <DependentUpon>KeyCompoSpecsReaderV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Machine Edit Form\KeySafetyComponentV2.resx">
+      <DependentUpon>KeySafetyComponentV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Machine Edit Form\MachineEditDataV2.resx">
+      <DependentUpon>MachineEditDataV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Machine Edit Form\MachineEditKeyComponentV2.resx">
+      <DependentUpon>MachineEditKeyComponentV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Machine Edit Form\OutputPropertyV2.resx">
+      <DependentUpon>OutputPropertyV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Machine Edit Form\Tentive_PriceV2.resx">
+      <DependentUpon>Tentive_PriceV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Multifloor\FloorConfig.resx">
+      <DependentUpon>FloorConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Multifloor\mulCadLayout.resx">
+      <DependentUpon>mulCadLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Multifloor\PlantLayout.resx">
+      <DependentUpon>PlantLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageMachine\PackageMachine.resx">
+      <DependentUpon>PackageMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageMachine\Remote_ConnectionV2.resx">
+      <DependentUpon>Remote_ConnectionV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentWindow.resx">
+      <DependentUpon>ParentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Safety Form list\JSAInputV2.resx">
+      <DependentUpon>JSAInputV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Safety Form list\ListSOPV2.resx">
+      <DependentUpon>ListSOPV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Safety Form list\LogDatacsV2.resx">
+      <DependentUpon>LogDatacsV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Safety Form list\SafetyChecklistV2.resx">
+      <DependentUpon>SafetyChecklistV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Safety Form list\SafetyDontsFrmV2.resx">
+      <DependentUpon>SafetyDontsFrmV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempLicencing\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="AppSetting.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\Electrical\Accessories\Annunciator.xlsx" />
+    <None Include="Images\Electrical\Accessories\Buccholz Relay.xlsx" />
+    <None Include="Images\Electrical\Accessories\Control Transformer.xlsx" />
+    <None Include="Images\Electrical\Accessories\Fan.xlsx" />
+    <None Include="Images\Electrical\Accessories\Fuse.xlsx" />
+    <None Include="Images\Electrical\Accessories\Neutral Grounding Resistance.xlsx" />
+    <None Include="Images\Electrical\Accessories\OLTC.xlsx" />
+    <None Include="Images\Electrical\Accessories\Pressure Relief Valve.xlsx" />
+    <None Include="Images\Electrical\Accessories\Surge Arrester.xlsx" />
+    <None Include="Images\Electrical\Accessories\Thermostat.xlsx" />
+    <None Include="Images\Electrical\Accessories\Timer.xlsx" />
+    <None Include="Images\Electrical\Accessories\WTI And OTI.xlsx" />
+    <None Include="Images\Electrical\Breaker\Air Circuit Breaker.xlsx" />
+    <None Include="Images\Electrical\Breaker\Arc Fault Circuit Interrupter.xlsx" />
+    <None Include="Images\Electrical\Breaker\Earth Leakage Circuit Breaker.xlsx" />
+    <None Include="Images\Electrical\Breaker\Ground Circuit Interrupter.xlsx" />
+    <None Include="Images\Electrical\Breaker\Miniature Circuit Breaker.xlsx" />
+    <None Include="Images\Electrical\Breaker\Molded Case Circuit Breaker.xlsx" />
+    <None Include="Images\Electrical\Breaker\Motor Protection Circuit Breaker.xlsx" />
+    <None Include="Images\Electrical\Breaker\Oil Circuit Breaker.xlsx" />
+    <None Include="Images\Electrical\Breaker\Residual Current Circuit Breaker.xlsx" />
+    <None Include="Images\Electrical\Breaker\SF Circuit Breaker.xlsx" />
+    <None Include="Images\Electrical\Breaker\SF Six Circuit Breaker.xlsx" />
+    <None Include="Images\Electrical\Breaker\Vaccum Circuit Breaker.xlsx" />
+    <None Include="Images\Electrical\Cable\CCTV Cable.xlsx" />
+    <None Include="Images\Electrical\Cable\Coaxial Cable.xlsx" />
+    <None Include="Images\Electrical\Cable\Control Cable.xlsx" />
+    <None Include="Images\Electrical\Cable\LAN Cable.xlsx" />
+    <None Include="Images\Electrical\Cable\Power Cable.xlsx" />
+    <None Include="Images\Electrical\Cable\Solar Cable.xlsx" />
+    <None Include="Images\Electrical\Cable\Telephone Cable.xlsx" />
+    <None Include="Images\Electrical\Diesel Generator\Diesel Generator.xlsx" />
+    <None Include="Images\Electrical\Instrument Transformer\Current Transformer.xlsx" />
+    <None Include="Images\Electrical\Instrument Transformer\Potential Transformer.xlsx" />
+    <None Include="Images\Electrical\Meter\Ammeter.xlsx" />
+    <None Include="Images\Electrical\Meter\Energymeter or Watthour Meter.xlsx" />
+    <None Include="Images\Electrical\Meter\Fluxmeter.xlsx" />
+    <None Include="Images\Electrical\Meter\Frequency Meter.xlsx" />
+    <None Include="Images\Electrical\Meter\Multi Functional Meter.xlsx" />
+    <None Include="Images\Electrical\Meter\Ohmmeter.xlsx" />
+    <None Include="Images\Electrical\Meter\Power Factor Meter.xlsx" />
+    <None Include="Images\Electrical\Meter\Synchroscope.xlsx" />
+    <None Include="Images\Electrical\Meter\Varmeter.xlsx" />
+    <None Include="Images\Electrical\Meter\Voltmeter.xlsx" />
+    <None Include="Images\Electrical\Meter\Wattmeter.xlsx" />
+    <None Include="Images\Electrical\Motor Starter\Autotransformer Starter.xlsx" />
+    <None Include="Images\Electrical\Motor Starter\DOL Starter.xlsx" />
+    <None Include="Images\Electrical\Motor Starter\Soft Starter.xlsx" />
+    <None Include="Images\Electrical\Motor Starter\Star Delta Starter.xlsx" />
+    <None Include="Images\Electrical\Motor\Brushless DC Motor.xlsx" />
+    <None Include="Images\Electrical\Motor\Normal DC Motor.xlsx" />
+    <None Include="Images\Electrical\Motor\Single Phase Induction Motor.xlsx" />
+    <None Include="Images\Electrical\Motor\Slip Ring Induction Motor.xlsx" />
+    <None Include="Images\Electrical\Motor\Squirrel Cage Induction Motor.xlsx" />
+    <None Include="Images\Electrical\Motor\Stepper Motor.xlsx" />
+    <None Include="Images\Electrical\Motor\Synchronous Motor.xlsx" />
+    <None Include="Images\Electrical\Others\Capacitor Bank.xlsx" />
+    <None Include="Images\Electrical\Others\Contactor.xlsx" />
+    <None Include="Images\Electrical\Others\Lighting Fixture.xlsx" />
+    <None Include="Images\Electrical\Others\Solar Inverter.xlsx" />
+    <None Include="Images\Electrical\Others\Solar PV Panel.xlsx" />
+    <None Include="Images\Electrical\Others\Surge Suppressor.xlsx" />
+    <None Include="Images\Electrical\Panel\HT Panel.xlsx" />
+    <None Include="Images\Electrical\Panel\LT Panel.xlsx" />
+    <None Include="Images\Electrical\Relay\Auxilliary Supervision Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Diatance Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Differential Protection Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Fast Trip And Look Out Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Frequency Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Instantanous Trip Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Neutral Displacement Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Over Current Protection Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Restricted Earth Fault Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Thermal Overload Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Time Lag Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Trip Circuit Supervision Relay.xlsx" />
+    <None Include="Images\Electrical\Relay\Voltage Sensing Relay.xlsx" />
+    <None Include="Images\Electrical\Transformer\Arc Furnance Transformer.xlsx" />
+    <None Include="Images\Electrical\Transformer\Auto Transformer.xlsx" />
+    <None Include="Images\Electrical\Transformer\Rectifier Transformer.xlsx" />
+    <None Include="Images\Electrical\Transformer\Transformer.xlsx" />
+    <None Include="Images\Electrical\Transformer\Variable Speed Drive Transformer.xlsx" />
+    <None Include="Images\Electrical\UPS\Industrial UPS.xlsx" />
+    <None Include="Images\Electrical\UPS\Low Power UPS or Commercial UPS.xlsx" />
+    <None Include="Images\Fire\Detector\Aspiration Type Detector.xlsx" />
+    <None Include="Images\Fire\Detector\Beam Detector Receiver.xlsx" />
+    <None Include="Images\Fire\Detector\Beam Detector Transmitter.xlsx" />
+    <None Include="Images\Fire\Detector\Flame Detector.xlsx" />
+    <None Include="Images\Fire\Detector\Gas Detector.xlsx" />
+    <None Include="Images\Fire\Detector\Heat Detector.xlsx" />
+    <None Include="Images\Fire\Detector\Linear Heat Sensing Cable.xlsx" />
+    <None Include="Images\Fire\Detector\Manual Call Point.xlsx" />
+    <None Include="Images\Fire\Detector\Multi Detector.xlsx" />
+    <None Include="Images\Fire\Detector\Smoke Detector.xlsx" />
+    <None Include="Images\Fire\Detector\Spark Detector.xlsx" />
+    <None Include="Images\Fire\Evacuation\Exit Light.xlsx" />
+    <None Include="Images\Fire\Evacuation\Exit Sign.xlsx" />
+    <None Include="Images\Fire\Extinguisher\Fire Extinguisher.xlsx" />
+    <None Include="Images\Fire\Gas Suppression\Gas Suppression System.xlsx" />
+    <None Include="Images\Fire\Hydrant System\Fire Brigade Inlet And Outlet Connection.xlsx" />
+    <None Include="Images\Fire\Hydrant System\Hose Pipe.xlsx" />
+    <None Include="Images\Fire\Hydrant System\Hose Reel.xlsx" />
+    <None Include="Images\Fire\Hydrant System\Hydrant Post.xlsx" />
+    <None Include="Images\Fire\Module\Control Module.xlsx" />
+    <None Include="Images\Fire\Module\Fault Isolation Module.xlsx" />
+    <None Include="Images\Fire\Module\Monitor Module.xlsx" />
+    <None Include="Images\Fire\Module\Relay Module.xlsx" />
+    <None Include="Images\Fire\Notification Appliances\Flasher And Hooter.xlsx" />
+    <None Include="Images\Fire\Notification Appliances\Flasher.xlsx" />
+    <None Include="Images\Fire\Notification Appliances\Hooter.xlsx" />
+    <None Include="Images\Fire\Panel\Fire Alarm And Control Panel.xlsx" />
+    <None Include="Images\Fire\Panel\Repeater Panel.xlsx" />
+    <None Include="Images\Fire\Smoke\Fire Damper.xlsx" />
+    <None Include="Images\Fire\Valve\Air Release Valve.xlsx" />
+    <None Include="Images\Fire\Valve\Alarm Check Valve.xlsx" />
+    <None Include="Images\Fire\Valve\Alarm or Gong Bell.xlsx" />
+    <None Include="Images\Fire\Valve\Area Control Valve.xlsx" />
+    <None Include="Images\Fire\Valve\Butterfly Valve.xlsx" />
+    <None Include="Images\Fire\Valve\Deluge Valve.xlsx" />
+    <None Include="Images\Fire\Valve\Foot Valve.xlsx" />
+    <None Include="Images\Fire\Valve\Gate Valve.xlsx" />
+    <None Include="Images\Fire\Valve\Non Return Valve or Check Valve.xlsx" />
+    <None Include="Images\Fire\Valve\Pressure Release Valve or Pressure Relief Valve or Pressure Safety Valve.xlsx" />
+    <None Include="Images\Fire\Valve\Swing Check Valve.xlsx" />
+    <None Include="Images\Fire\Valve\Tamper Switch.xlsx" />
+    <None Include="Images\Fire\Water Based Suppression\Diesel Driven Pump.xlsx" />
+    <None Include="Images\Fire\Water Based Suppression\Electric Pump.xlsx" />
+    <None Include="Images\Fire\Water Based Suppression\Jockey Pump.xlsx" />
+    <None Include="Images\Fire\Water Based Suppression\Sprinkler.xlsx" />
+    <None Include="Images\Instrumentation\Analyzer\Carbon Dioxide Analyzer.xlsx" />
+    <None Include="Images\Instrumentation\Analyzer\Dew Point Analyzer.xlsx" />
+    <None Include="Images\Instrumentation\Analyzer\Hydrocarbon Analyzer.xlsx" />
+    <None Include="Images\Instrumentation\Analyzer\Hydrogen Sulfide Analyzer.xlsx" />
+    <None Include="Images\Instrumentation\Analyzer\NOx Analyzer.xlsx" />
+    <None Include="Images\Instrumentation\Analyzer\Oxygen Analyzer.xlsx" />
+    <None Include="Images\Instrumentation\Analyzer\PH and ORP Analyzer.xlsx" />
+    <None Include="Images\Instrumentation\Analyzer\SOx Analyzer.xlsx" />
+    <None Include="Images\Instrumentation\Analyzer\TDS Analyzer.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Annular Orifice Meter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Cone Meter or V Cone Meter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Coriolis Flowmeter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Flow Indicating Controller.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Flow Switch.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Flow Transmitter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Magnetic Flowmeter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Open Channel Flowmeter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Positive Displacement Flowmeter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Propeller Flowmeter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Rota Meter or Ball Float.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Target Flowmeter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Thermal Mass Flowmeter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Turbine Flowmeter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Ultrasonic Flowmeter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Variable Area Flowmeter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Vortex Shedding Flowmeter.xlsx" />
+    <None Include="Images\Instrumentation\Flow Equipment\Wedge Meter.xlsx" />
+    <None Include="Images\Instrumentation\Level Equipment\Ball Float Level Gauge.xlsx" />
+    <None Include="Images\Instrumentation\Level Equipment\Dip Tube Gauge or Bubble Tube Gauge.xlsx" />
+    <None Include="Images\Instrumentation\Level Equipment\Displacer Level Gauge.xlsx" />
+    <None Include="Images\Instrumentation\Level Equipment\Guided Wave Radar.xlsx" />
+    <None Include="Images\Instrumentation\Level Equipment\Laser Level Gauge.xlsx" />
+    <None Include="Images\Instrumentation\Level Equipment\Level Control Valve.xlsx" />
+    <None Include="Images\Instrumentation\Level Equipment\Level Indicating Controller.xlsx" />
+    <None Include="Images\Instrumentation\Level Equipment\Level Switch.xlsx" />
+    <None Include="Images\Instrumentation\Level Equipment\Level Transmitter.xlsx" />
+    <None Include="Images\Instrumentation\Level Equipment\Magnetic Level Gauge.xlsx" />
+    <None Include="Images\Instrumentation\Level Equipment\Ultrasonic Level Meter.xlsx" />
+    <None Include="Images\Instrumentation\Pressure Equipment\Differential Pressure Gauge.xlsx" />
+    <None Include="Images\Instrumentation\Pressure Equipment\Differential Pressure Switch.xlsx" />
+    <None Include="Images\Instrumentation\Pressure Equipment\Differential Pressure Transmitter.xlsx" />
+    <None Include="Images\Instrumentation\Pressure Equipment\Pressure Controller or Pressure Indicating Controller.xlsx" />
+    <None Include="Images\Instrumentation\Pressure Equipment\Pressure Gauge.xlsx" />
+    <None Include="Images\Instrumentation\Pressure Equipment\Pressure Switch.xlsx" />
+    <None Include="Images\Instrumentation\Pressure Equipment\Pressure Transmitter.xlsx" />
+    <None Include="Images\Instrumentation\Switch\Limit Switch.xlsx" />
+    <None Include="Images\Instrumentation\Temperature Equipment\Direct Acting Temperature Control Valve.xlsx" />
+    <None Include="Images\Instrumentation\Temperature Equipment\Temperature Gauge.xlsx" />
+    <None Include="Images\Instrumentation\Temperature Equipment\Temperature Indicating Controller.xlsx" />
+    <None Include="Images\Instrumentation\Temperature Equipment\Temperature Indicator.xlsx" />
+    <None Include="Images\Instrumentation\Temperature Equipment\Temperature Switch.xlsx" />
+    <None Include="Images\Instrumentation\Temperature Equipment\Temperature Transmitter.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Air Release Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Alarm Check Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Alarm or Gong Bell.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Ball Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Butterfly Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Check Valve or Non Return Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Deluge Valve System.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Differential Pressure Control Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Flow Control Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Foot Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Gate Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Globe Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Needle Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Pinch Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Plug Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Pressure Control Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Pressure Relief Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Solenoid Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Swing Check Valve.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Tamper Switch.xlsx" />
+    <None Include="Images\Instrumentation\Valve\Zone Control Valve.xlsx" />
+    <None Include="Images\Instrumentation\Vibration Equipment\Accelerometer.xlsx" />
+    <None Include="Images\Instrumentation\Vibration Equipment\Key Phasor.xlsx" />
+    <None Include="Images\Instrumentation\Vibration Equipment\Vibration Transmitter.xlsx" />
+    <None Include="Images\Instrumentation\Weight\Load Cell.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Acoustic Insulation.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\After Filter.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Air Blower.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Air Cooled Condenser.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Air Grill.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Air Handling Unit.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Air Washer System.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Axial Fan.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Cassette Type Indoor Unit.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Centrifugal Fan.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Cold Duct Insulation.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Cooling Coil.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Diffuser.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Fire Damper.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Hi Wall Indoor Unit.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Hot Duct Insulation.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Packaged Type AC.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Pre Filter.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Reciprocating Compressor.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Scroll Type Compressor.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Smoke Damper.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Split Type AC.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\TFA Unit VRF.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Thermal Insulation.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\V Belt.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Volume Control Damper.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\VRF Outdoor Unit.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Water Cooled Condenser.xlsx" />
+    <None Include="Images\Mechanical\Air Conditioning System\Window Type AC.xlsx" />
+    <None Include="Images\Mechanical\Filter Equipment\Basket Filter.xlsx" />
+    <None Include="Images\Mechanical\Filter Equipment\Carbon Filter.xlsx" />
+    <None Include="Images\Mechanical\Filter Equipment\Cartridge Filter.xlsx" />
+    <None Include="Images\Mechanical\Filter Equipment\Cartridge Type Duplex Filter.xlsx" />
+    <None Include="Images\Mechanical\Filter Equipment\Coalescer or Oil Separator.xlsx" />
+    <None Include="Images\Mechanical\Filter Equipment\Duplex Filter.xlsx" />
+    <None Include="Images\Mechanical\Filter Equipment\Horizontal Vacuum Pan Filter or Pan Filter.xlsx" />
+    <None Include="Images\Mechanical\Filter Equipment\Rotary Disc Filter or Rotary Vacuum Disc Filter.xlsx" />
+    <None Include="Images\Mechanical\Filter Equipment\Rotary Drum Vacuum Filter or Rotary Vacuum Drum Filter.xlsx" />
+    <None Include="Images\Mechanical\Filter Equipment\Sand Filter.xlsx" />
+    <None Include="Images\Mechanical\Filter Equipment\Strainer.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Acetylene Gas Manifold.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Argon Gas Manifold.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Butterfly Valve.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Carbon Di Oxide Manifold.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Deaerator Tank.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Demister Pad.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Electric Heater.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Hydraulic Power Pack.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Loading Arm.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Noise Enclosure.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Strip Heater Air Conditioning System.xlsx" />
+    <None Include="Images\Mechanical\General Mechanical Equipment\Vacuum Breaker.xlsx" />
+    <None Include="Images\Mechanical\Maintenance &amp; Tool Room\CNC Drilling Machine.xlsx" />
+    <None Include="Images\Mechanical\Maintenance &amp; Tool Room\Drilling Machine.xlsx" />
+    <None Include="Images\Mechanical\Maintenance &amp; Tool Room\Grinding Machine.xlsx" />
+    <None Include="Images\Mechanical\Maintenance &amp; Tool Room\Hand Grinding Machine.xlsx" />
+    <None Include="Images\Mechanical\Maintenance &amp; Tool Room\Lathe Machine.xlsx" />
+    <None Include="Images\Mechanical\Maintenance &amp; Tool Room\Milling Machine.xlsx" />
+    <None Include="Images\Mechanical\Maintenance &amp; Tool Room\Welding Machine or Electric Arc Welding Machine.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Air Balance.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Apron Feeder.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Bag Splitting Machine.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Ball Mill.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Battery Driven Forklift Truck.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Bucket Elevator.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Chain Roller Conveyor.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Cone Crusher Inlet Hopper With Grizzly.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Conveyor Belt.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Conveyor Drive Pulley.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Conveyor Idler.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Conveyor Impact Idlers.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Crusher.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Diesel Driven Forklift Truck.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Diverter Valve or Flap Gate.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Elevator or Lift.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\EOT Crane.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Flexible Screw Conveyor.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Grating Screen.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Jib Crane.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Metal Detector Conveying System.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Online weighing system.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Passenger Lift.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Platform Truck.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Roll Crusher or Double Roll Crusher.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Roller Conveyor.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Rotary Air Lock Valve.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Rotary Valve.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Screw Conveyor.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Screw Dryer.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Slat Conveyor.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Underslung EOT Crane.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Vibrating Screen.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Weigh Belt Feeder.xlsx" />
+    <None Include="Images\Mechanical\Material Handling Equipment\Weigh Scale.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Air Curtain.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Bag Filter.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Bag Unloader.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Bagging Machine.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Bailing Machine.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Cyclone.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Drum Tilter.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Dust Collector.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Dust Suppression System.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Heatless Type Air Dryer.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\HOC Type Air Dryer.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Hydraulic Press.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Hydrocyclone STP.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Liquid Filling Machine.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Nitrogen Gas Manifold.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Palletizer.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\PSA Nitrogen Package.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\PSA Oxygen Package.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Sewing Machine.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Split Flow Type Air Dryer.xlsx" />
+    <None Include="Images\Mechanical\Package Equipment\Wet Scrubber System.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Aftercooler.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Air Cooled Heat Exchanger Aftercooler.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Air Cooled Heat Exchanger Intercooler.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Air Cooled Lube Oil Cooler.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Centrifugal Compressor.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Controlled Volume Pump.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Cooler Drum.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Diaphragm Type Reciprocating Compressor.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Diesel Engine.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Dryer Drum.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Expander Compressor.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Gear Box Unit.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Gear Type Rotary Pump.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\General Mechanical Seal.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\General Purpose Steam Turbine.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Granulation Drum.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Horizontal Inline Centrifugal Pump.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Induced Draft Blower or Forced Draft Blower.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Integrally Geared Centrifugal Air Compressor.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Intercooler.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Labyrinth Type Reciprocating Compressor.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Liquid Ring Type Rotary Compressor.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Lobe Type Rotary Compressor.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Lobe Type Rotary Pump.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Process Reciprocating Compressor.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Pump Dry Gas Seal System.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Pump Lube Oil System.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Pump Mechanical Seal.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Reciprocating Air Compressor.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Reciprocating Pump.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Screw Type Rotary Compressor.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Screw Type Rotary Pump.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Shell And Tube Type Lube Oil Cooler.xlsx" />
+    <None Include="Images\Mechanical\Rotating Equipment\Vertical Centrifugal Pump.xlsx" />
+    <None Include="Images\Mechanical\Sewage Treatment Plant Equipment\Macerator Pump.xlsx" />
+    <None Include="Images\Mechanical\Sewage Treatment Plant Equipment\STP Fan.xlsx" />
+    <None Include="Images\Mechanical\Sewage Treatment Plant Equipment\STP.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Agitator.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Air Cooled Heat Exchange.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Air Cooler.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Blast Furnace.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Boiler Package.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Boiler Vessel.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Cylinder.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Heat Exchanger Package.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Jacketed Vessel.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Moisture Separator or Mist Eliminator.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Plate Heat Exchanger.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Reactor.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Shell And Tube Type Heat Exchanger.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Silencer.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Silo.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Static Mixture.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Tank.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Vessel.xlsx" />
+    <None Include="Images\Mechanical\Static Equipment\Water Cooled Heat Exchange.xlsx" />
+    <None Include="KeyComponentData\Key component.xlsx" />
+    <None Include="KeyComponentData\SpecsData\After Filter.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Agitator.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Air Filter.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Bag Filter.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Bar Gates.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Basket.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Battery Connector.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Battery.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Bearing.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Blade-Agitator.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Bolt.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Brake.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Bucket.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Bypass Valve.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Communication Cable.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Condenser Coil.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Condenser Fan.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Connecting Rod.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Control Valve.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Cooling Coil.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Cooling Water Pump.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Copper Tube.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Coupling Bolt.xlsx" />
+    <None Include="KeyComponentData\SpecsData\Key Components.xlsx" />
+    <None Include="MCD_FileUploads\bjeguewgu\sASA.xlsx" />
+    <None Include="MCD_FileUploads\bjeguewgu\toaster.xlsx" />
+    <None Include="MCD_FileUploads\bjeguewgu\ttps.xlsx" />
+    <None Include="MCD_FileUploads\bjwe\Copy of EmployeeDetails-1 %281%29.xlsx" />
+    <None Include="MCD_FileUploads\j3g\Mnt11.xlsx" />
+    <None Include="MCD_FileUploads\j3g\P1-103.xlsx" />
+    <None Include="MCD_FileUploads\MCD001\Copy of EmployeeDetails-1 %281%29.xlsx" />
+    <None Include="MCD_FileUploads\MCD001\Table Relation.xlsx" />
+    <None Include="MCD_FileUploads\MCD1987\MaintenanceU0.xlsx" />
+    <None Include="MCD_FileUploads\MCD1987\Table Relation %281%29 %281%29.xlsx" />
+    <None Include="MCD_FileUploads\MCD2299\sASA.xlsx" />
+    <None Include="MCD_FileUploads\MCD2299\toaster.xlsx" />
+    <None Include="MCD_FileUploads\MCD2299\tree.xlsx" />
+    <None Include="MCD_FileUploads\MCD3345\eeqwe2.xlsx" />
+    <None Include="MCD_FileUploads\MCD3345\token.xlsx" />
+    <None Include="MCD_FileUploads\MCD3345\ttps.xlsx" />
+    <None Include="MCD_FileUploads\MCD3345\u1.xlsx" />
+    <None Include="MCD_FileUploads\MCD34\nmnt.xlsx" />
+    <None Include="MCD_FileUploads\MCD34\toaster.xlsx" />
+    <None Include="MCD_FileUploads\mcd4121\tree.xlsx" />
+    <None Include="MCD_FileUploads\mcd556\MaintenanceU0.xlsx" />
+    <None Include="MCD_FileUploads\MCD56\Copy of EmployeeDetails-1 %281%29.xlsx" />
+    <None Include="MCD_FileUploads\MCD56\Copy of EmployeeDetails-1.xlsx" />
+    <None Include="MCD_FileUploads\MCD56\eeqwe2.xlsx" />
+    <None Include="MCD_FileUploads\MCD56\newformt.xlsx" />
+    <None Include="MCD_FileUploads\MCD56\Table Relation %281%29 %281%29.xlsx" />
+    <None Include="MCD_FileUploads\MCD609\Copy of EmployeeDetails-1 %281%29.xlsx" />
+    <None Include="MCD_FileUploads\MCD6789\sASA.xlsx" />
+    <None Include="MCD_FileUploads\MCD6789\Table Relation.xlsx" />
+    <None Include="MCD_FileUploads\MCD6789\toaster.xlsx" />
+    <None Include="MCD_FileUploads\MCDF110\BngProductivity.csv" />
+    <None Include="MCD_FileUploads\MCDF110\BngProductivity_2021_05_10_18_50_36.csv" />
+    <None Include="MCD_FileUploads\MCDF110\Gantt_Excel_Pro_Daily_Free.xlsm" />
+    <None Include="MCD_FileUploads\MCDF110\P1-103.xlsx" />
+    <None Include="MCD_FileUploads\MCDF110\sASA.xlsx" />
+    <None Include="MCD_FileUploads\MCFt6\Table Relation %281%29.xlsx" />
+    <None Include="MCD_FileUploads\MCFt6\u1.xlsx" />
+    <None Include="MCD_FileUploads\mcvh678test\toaster.xlsx" />
+    <None Include="MCD_FileUploads\mcvh678test\token.xlsx" />
+    <None Include="MCD_FileUploads\mcvh678test\u1.xlsx" />
+    <None Include="MCD_FileUploads\Mop099\MaintenanceU0.xlsx" />
+    <None Include="MCD_FileUploads\Mop099\u1.xlsx" />
+    <None Include="MCD_FileUploads\MVC10\newformt.xlsx" />
+    <None Include="MCD_FileUploads\MVC10\tree.xlsx" />
+    <None Include="MCD_FileUploads\tab1189\12345.xlsx" />
+    <None Include="MCD_FileUploads\tab1189\Mnt11.xlsx" />
+    <None Include="MCD_FileUploads\tab1189\newformt.xlsx" />
+    <None Include="MCD_FileUploads\tb\weqewqewqewq.xlsx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whitebg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(SolutionDir)MCD_FileUploads\**\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(SolutionDir)Application_Machines\**" CopyToOutputDirectory="PreserveNewest">
+    </Content>
+    <Content Include="$(SolutionDir)KeyComponentData\**" CopyToOutputDirectory="PreserveNewest">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageMarginsNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageMarginsNarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PaperKind_Tabloid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Application_Machines\Basket Filter_General.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Application_Machines\Basket Filter_Process.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Application_Machines\CopyData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="KeyComponentData\KeyComponentsUserDataAgitator_Specific.xml" />
+    <None Include="KeyComponentData\KeyComponentsUserData\Agitator_1_General.xml" />
+    <None Include="KeyComponentData\KeyComponentsUserData\Agitator_General.xml" />
+    <None Include="KeyComponentData\KeyComponentsUserData\Agitator_Specific.xml" />
+    <None Include="KeyComponentData\KeyComponentsUserData\Basket Filter_4_General.xml" />
+    <None Include="KeyComponentData\KeyComponentsUserData\Basket Filter_4_Specific.xml" />
+    <Content Include="Resources\DeleteAll.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToLibrary_32x32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\RMPCLIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\RMPCLIcon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\resetlayoutoptions.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\30.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Electrical\Breaker\Air Circuit Breaker.png" />
+    <Content Include="Images\Electrical\Breaker\Earth Leakage Circuit Breaker.png" />
+    <Content Include="Images\Electrical\Breaker\Miniature Circuit Breaker.png" />
+    <Content Include="Images\Electrical\Breaker\Molded Case Circuit Breaker.png" />
+    <Content Include="Images\Electrical\Breaker\Motor Protection Circuit Breaker.png" />
+    <Content Include="Images\Electrical\Breaker\Oil Circuit Breaker.png" />
+    <Content Include="Images\Electrical\Breaker\Residual Current Circuit Breaker.png" />
+    <Content Include="Images\Electrical\Breaker\SF Circuit Breaker.png" />
+    <Content Include="Images\Electrical\Breaker\Vaccum Circuit Breaker.png" />
+    <Content Include="Images\Electrical\Diesel Generator\Diesel Generator.png" />
+    <Content Include="Images\Electrical\Meter\Ammeter.png" />
+    <Content Include="Images\Electrical\Meter\Energymeter or Watthour Meter.png" />
+    <Content Include="Images\Electrical\Meter\Frequency Meter.png" />
+    <Content Include="Images\Electrical\Meter\Ohmmeter.png" />
+    <Content Include="Images\Electrical\Meter\Power Factor Meter.png" />
+    <Content Include="Images\Electrical\Meter\Synchroscope.png" />
+    <Content Include="Images\Electrical\Meter\Varmeter.png" />
+    <Content Include="Images\Electrical\Meter\Voltmeter.png" />
+    <Content Include="Images\Electrical\Meter\Wattmeter.png" />
+    <Content Include="Images\Electrical\Motor\Normal DC Motor.png" />
+    <Content Include="Images\Electrical\Motor\Slip Ring Induction Motor.png" />
+    <Content Include="Images\Electrical\Motor\Squirrel Cage Induction Motor.png" />
+    <Content Include="Images\Electrical\Motor\Stepper Motor.png" />
+    <Content Include="Images\Electrical\Motor\Synchronous Motor.png" />
+    <Content Include="Images\Electrical\Panel\HT Panel.png" />
+    <Content Include="Images\Electrical\Panel\LT Panel.png" />
+    <Content Include="Images\Electrical\Transformer\Transformer.png" />
+    <Content Include="Images\Fire\Detector\Aspiration Type Detector.png" />
+    <Content Include="Images\Fire\Detector\Beam Detector Receiver.png" />
+    <Content Include="Images\Fire\Detector\Beam detector Transmitter.png" />
+    <Content Include="Images\Fire\Detector\Flame Detector.png" />
+    <Content Include="Images\Fire\Detector\Gas Detector.png" />
+    <Content Include="Images\Fire\Detector\Heat Detector.png" />
+    <Content Include="Images\Fire\Detector\Linear Heat Sensing Cable.png" />
+    <Content Include="Images\Fire\Detector\Manual Call Point.png" />
+    <Content Include="Images\Fire\Detector\Smoke Detector.png" />
+    <Content Include="Images\Fire\Detector\Spark Detector.png" />
+    <Content Include="Images\Fire\Evacuation\Exit Light.png" />
+    <Content Include="Images\Fire\Evacuation\Exit Sign.png" />
+    <Content Include="Images\Fire\Extinguisher\Fire Extinguisher.png" />
+    <Content Include="Images\Fire\Hydrant System\Hose Reel.png" />
+    <Content Include="Images\Fire\Hydrant System\Hydrant Post.png" />
+    <Content Include="Images\Fire\Module\Control Module.png" />
+    <Content Include="Images\Fire\Module\Fault Isolation Module.png" />
+    <Content Include="Images\Fire\Module\Monitor Module.png" />
+    <Content Include="Images\Fire\Module\Relay Module.png" />
+    <Content Include="Images\Fire\Notification Appliances\Flasher And Hooter.png" />
+    <Content Include="Images\Fire\Notification Appliances\Flasher.png" />
+    <Content Include="Images\Fire\Notification Appliances\Hooter.png" />
+    <Content Include="Images\Fire\Panel\Fire Alarm and Control Panel.png" />
+    <Content Include="Images\Fire\Panel\Repeater Panel.png" />
+    <Content Include="Images\Fire\Smoke\Fire Damper.png" />
+    <Content Include="Images\Fire\Valve\Air Release Valve.png" />
+    <Content Include="Images\Fire\Valve\Alarm Check Valve.png" />
+    <Content Include="Images\Fire\Valve\Alarm or Gong Bell.png" />
+    <Content Include="Images\Fire\Valve\Area Control Valve.png" />
+    <Content Include="Images\Fire\Valve\Butterfly Valve.png" />
+    <Content Include="Images\Fire\Valve\Deluge Valve.png" />
+    <Content Include="Images\Fire\Valve\Foot Valve.png" />
+    <Content Include="Images\Fire\Valve\Gate Valve.png" />
+    <Content Include="Images\Fire\Valve\Non Return Valve or Check Valve.png" />
+    <Content Include="Images\Fire\Valve\Pressure Release Valve or Pressure Relief Valve or Pressure Safety Valve.png" />
+    <Content Include="Images\Fire\Valve\Swing Check Valve.png" />
+    <Content Include="Images\Fire\Valve\Tamper Switch.png" />
+    <Content Include="Images\Fire\Water Based Suppression\Diesel Driven Pump.png" />
+    <Content Include="Images\Fire\Water Based Suppression\Electric Pump.png" />
+    <Content Include="Images\Fire\Water Based Suppression\Jockey Pump.png" />
+    <Content Include="Images\Fire\Water Based Suppression\Sprinkler.png" />
+    <Content Include="Images\HindalcoiOSScript.Sql" />
+    <Content Include="Images\Instrumentation\Analyzer\Carbon Dioxide Analyzer.png" />
+    <Content Include="Images\Instrumentation\Analyzer\Dew Point Analyzer.png" />
+    <Content Include="Images\Instrumentation\Analyzer\Hydrocarbon Analyzer.png" />
+    <Content Include="Images\Instrumentation\Analyzer\Hydrogen Sulfide Analyzer.png" />
+    <Content Include="Images\Instrumentation\Analyzer\NOx Analyzer.png" />
+    <Content Include="Images\Instrumentation\Analyzer\Oxygen Analyzer.png" />
+    <Content Include="Images\Instrumentation\Analyzer\PH and ORP Analyzer.png" />
+    <Content Include="Images\Instrumentation\Analyzer\SOx Analyzer.png" />
+    <Content Include="Images\Instrumentation\Analyzer\TDS Analyzer.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Annular Orifice Meter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Cone Meter or V Cone Meter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Coriolis Flowmeter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Flow Indicating Controller.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Flow Switch.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Flow Transmitter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Magnetic Flowmeter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Open Channel Flowmeter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Positive Displacement Flowmeter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Propeller Flowmeter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Rota Meter or Ball Float.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Target Flowmeter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Thermal Mass Flowmeter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Turbine Flowmeter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Ultrasonic Flowmeter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Variable Area Flowmeter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Vortex Shedding Flowmeter.png" />
+    <Content Include="Images\Instrumentation\Flow Equipment\Wedge Meter.png" />
+    <Content Include="Images\Instrumentation\Level Equipment\Ball Float Level Gauge.png" />
+    <Content Include="Images\Instrumentation\Level Equipment\Dip Tube Gauge or Bubble Tube Gauge.png" />
+    <Content Include="Images\Instrumentation\Level Equipment\Displacer Level Gauge.png" />
+    <Content Include="Images\Instrumentation\Level Equipment\Guided Wave Radar.png" />
+    <Content Include="Images\Instrumentation\Level Equipment\Laser Level Gauge.png" />
+    <Content Include="Images\Instrumentation\Level Equipment\Level Control Valve.png" />
+    <Content Include="Images\Instrumentation\Level Equipment\Level Indicating Controller.png" />
+    <Content Include="Images\Instrumentation\Level Equipment\Level Switch.png" />
+    <Content Include="Images\Instrumentation\Level Equipment\Level Transmitter.png" />
+    <Content Include="Images\Instrumentation\Level Equipment\Magnetic Level Gauge.png" />
+    <Content Include="Images\Instrumentation\Level Equipment\Ultrasonic Level Meter.png" />
+    <Content Include="Images\Instrumentation\Pressure Equipment\Differential Pressure Gauge.png" />
+    <Content Include="Images\Instrumentation\Pressure Equipment\Differential Pressure Switch.png" />
+    <Content Include="Images\Instrumentation\Pressure Equipment\Differential Pressure Transmitter.png" />
+    <Content Include="Images\Instrumentation\Pressure Equipment\Pressure Controller or Pressure Indicating Controller.png" />
+    <Content Include="Images\Instrumentation\Pressure Equipment\Pressure Gauge.png" />
+    <Content Include="Images\Instrumentation\Pressure Equipment\Pressure Switch.png" />
+    <Content Include="Images\Instrumentation\Pressure Equipment\Pressure Transmitter.png" />
+    <Content Include="Images\Instrumentation\Switch\Limit Switch.png" />
+    <Content Include="Images\Instrumentation\Temperature Equipment\Direct Acting Temperature Control Valve.png" />
+    <Content Include="Images\Instrumentation\Temperature Equipment\Temperature Gauge.png" />
+    <Content Include="Images\Instrumentation\Temperature Equipment\Temperature Indicating Controller.png" />
+    <Content Include="Images\Instrumentation\Temperature Equipment\Temperature Indicator.png" />
+    <Content Include="Images\Instrumentation\Temperature Equipment\Temperature Switch.png" />
+    <Content Include="Images\Instrumentation\Temperature Equipment\Temperature Transmitter.png" />
+    <Content Include="Images\Instrumentation\Valve\Air Release Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Alarm Check Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Alarm or Gong Bell.png" />
+    <Content Include="Images\Instrumentation\Valve\Ball Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Butterfly Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Check Valve or Non Return Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Deluge Valve System.png" />
+    <Content Include="Images\Instrumentation\Valve\Differential Pressure Control Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Flow Control Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Foot Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Gate Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Globe Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Needle Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Pinch Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Plug Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Pressure Control Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Pressure Relief Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Solenoid Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Swing Check Valve.png" />
+    <Content Include="Images\Instrumentation\Valve\Tamper Switch.png" />
+    <Content Include="Images\Instrumentation\Valve\Zone Control Valve.png" />
+    <Content Include="Images\Instrumentation\Vibration Equipment\Accelerometer.png" />
+    <Content Include="Images\Instrumentation\Vibration Equipment\Key Phasor.png" />
+    <Content Include="Images\Instrumentation\Vibration Equipment\Vibration Transmitter.png" />
+    <Content Include="Images\Instrumentation\Weight\Load Cell.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Acoustic Insulation.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\After Filter.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Air Blower.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Air Cooled Condenser.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Air Grill.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Air Handling Unit.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Air Washer System.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Axial Fan.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Cassette Type Indoor Unit.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Centrifugal Fan.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Cold Duct Insulation.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Cooling Coil.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Diffuser.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Fire Damper.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Hi Wall Indoor Unit.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Hot Duct Insulation.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Packaged Type AC.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Pre Filter.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Reciprocating Compressor.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Scroll Type Compressor.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Smoke Damper.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Split Type AC.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\TFA Unit VRF.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Thermal Insulation.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\V Belt.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Volume Control Damper.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\VRF Outdoor Unit.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Water Cooled Condenser.png" />
+    <Content Include="Images\Mechanical\Air Conditioning System\Window Type AC.png" />
+    <Content Include="Images\Mechanical\Filter Equipment\Basket Filter.png" />
+    <Content Include="Images\Mechanical\Filter Equipment\Carbon Filter.png" />
+    <Content Include="Images\Mechanical\Filter Equipment\Cartridge Filter.png" />
+    <Content Include="Images\Mechanical\Filter Equipment\Cartridge Type Duplex Filter.png" />
+    <Content Include="Images\Mechanical\Filter Equipment\Coalescer or Oil Separator.png" />
+    <Content Include="Images\Mechanical\Filter Equipment\Duplex Filter.png" />
+    <Content Include="Images\Mechanical\Filter Equipment\Horizontal Vacuum Pan Filter or Pan Filter.png" />
+    <Content Include="Images\Mechanical\Filter Equipment\Rotary Disc Filter or Rotary Vacuum Disc Filter.png" />
+    <Content Include="Images\Mechanical\Filter Equipment\Rotary Drum Vacuum Filter or Rotary Vacuum Drum Filter.png" />
+    <Content Include="Images\Mechanical\Filter Equipment\Sand Filter.png" />
+    <Content Include="Images\Mechanical\Filter Equipment\Strainer.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Acetylene Gas Manifold.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Argon Gas Manifold.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Butterfly Valve.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Carbon Di Oxide Manifold.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Deaerator Tank.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Demister Pad.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Electric Heater.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Hydraulic Power Pack.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Loading Arm.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Noise Enclosure.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Strip Heater Air Conditioning System.png" />
+    <Content Include="Images\Mechanical\General Mechanical Equipment\Vacuum Breaker.png" />
+    <Content Include="Images\Mechanical\Maintenance &amp; Tool Room\CNC Drilling Machine.png" />
+    <Content Include="Images\Mechanical\Maintenance &amp; Tool Room\Drilling Machine.png" />
+    <Content Include="Images\Mechanical\Maintenance &amp; Tool Room\Grinding Machine.png" />
+    <Content Include="Images\Mechanical\Maintenance &amp; Tool Room\Hand Grinding Machine.png" />
+    <Content Include="Images\Mechanical\Maintenance &amp; Tool Room\Lathe Machine.png" />
+    <Content Include="Images\Mechanical\Maintenance &amp; Tool Room\Milling Machine.png" />
+    <Content Include="Images\Mechanical\Maintenance &amp; Tool Room\Welding Machine or Electric Arc Welding Machine.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Air Balance.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Apron Feeder.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Bag Splitting Machine.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Ball Mill.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Battery Driven Forklift Truck.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Bucket Elevator.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Chain Roller Conveyor.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Cone Crusher Inlet Hopper With Grizzly.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Conveyor Belt.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Conveyor Drive Pulley.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Conveyor Idler.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Conveyor Impact Idlers.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Crusher.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Diesel Driven Forklift Truck.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Diverter Valve or Flap Gate.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Elevator or Lift.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\EOT Crane.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Flexible Screw Conveyor.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Grating Screen.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Jib Crane.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Metal Detector Conveying System.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Online Weighing System.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Passenger Lift.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Platform Truck.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Roll Crusher or Double Roll Crusher.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Roller Conveyor.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Rotary Air Lock Valve.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Rotary Valve.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Screw Conveyor.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Screw Dryer.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Slat Conveyor.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Underslung EOT Crane.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Vibrating Screen.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Weigh Belt Feeder.png" />
+    <Content Include="Images\Mechanical\Material Handling Equipment\Weigh Scale.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Air Curtain.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Bag Filter.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Bag Unloader.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Bagging Machine.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Bailing Machine.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Cyclone.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Drum Tilter.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Dust Collector.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Dust Suppression System.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Heatless Type Air Dryer.png" />
+    <Content Include="Images\Mechanical\Package Equipment\HOC Type Air Dryer.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Hydraulic Press.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Hydrocyclone STP.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Liquid Filling Machine.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Nitrogen Gas Manifold.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Palletizer.png" />
+    <Content Include="Images\Mechanical\Package Equipment\PSA Nitrogen Package.png" />
+    <Content Include="Images\Mechanical\Package Equipment\PSA Oxygen Package.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Sewing Machine.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Split Flow Type Air Dryer.png" />
+    <Content Include="Images\Mechanical\Package Equipment\Wet Scrubber System.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Aftercooler.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Air Cooled Heat Exchanger Aftercooler.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Air Cooled Heat Exchanger Intercooler.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Air Cooled Lube Oil Cooler.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Centrifugal Compressor.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Controlled Volume Pump.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Cooler Drum.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Diaphragm Type Reciprocating Compressor.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Diesel Engine.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Dryer Drum.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Expander Compressor.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Gear Box Unit.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Gear Type Rotary Pump.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\General Mechanical Seal.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\General Purpose Steam Turbine.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Granulation Drum.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Horizontal Inline Centrifugal Pump.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Induced Draft Blower or Forced Draft Blower.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Integrally Geared Centrifugal Air Compressor.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Intercooler.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Labyrinth Type Reciprocating Compressor.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Liquid Ring Type Rotary Compressor.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Lobe Type Rotary Compressor.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Lobe Type Rotary Pump.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Process Reciprocating Compressor.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Pump Dry Gas Seal System.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Pump Lube Oil System.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Pump Mechanical Seal.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Reciprocating Air Compressor.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Reciprocating Pump.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Screw Type Rotary Compressor.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Screw Type Rotary Pump.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Shell And Tube Type Lube Oil Cooler.png" />
+    <Content Include="Images\Mechanical\Rotating Equipment\Vertical Centrifugal Pump.png" />
+    <Content Include="Images\Mechanical\Sewage Treatment Plant Equipment\Macerator Pump.png" />
+    <Content Include="Images\Mechanical\Sewage Treatment Plant Equipment\STP Fan.png" />
+    <Content Include="Images\Mechanical\Sewage Treatment Plant Equipment\STP.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Agitator.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Air Cooled Heat Exchange.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Air Cooler.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Blast Furnace.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Boiler Package.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Boiler Vessel.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Cylinder.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Heat Exchanger Package.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Jacketed Vessel.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Moisture Separator or Mist Eliminator.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Plate Heat Exchanger.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Reactor.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Shell And Tube Type Heat Exchanger.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Silencer.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Silo.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Static Mixture.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Tank.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Vessel.png" />
+    <Content Include="Images\Mechanical\Static Equipment\Water Cooled Heat Exchange.png" />
+    <Content Include="Images\RCConnector\RC.png" />
+    <Content Include="RMPCLIcon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterPackage" AfterTargets="CopyAllFilesToSingleFolderForPackage" />
+  <ItemGroup>
+    <FluentValidationExcludedCultures Include="cs;da;de;es;fa;fi;ja;fr;it;ko;mk;nl;pl;pt;ru;sv;tr;zh-CN">
+      <InProject>false</InProject>
+    </FluentValidationExcludedCultures>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="sub1\**\*.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DynamicSqlCreation\DynamicSqlCreation\DynamicSqlCreation.csproj">
+      <Project>{2d598100-700a-459b-b450-a9f2df641e3b}</Project>
+      <Name>DynamicSqlCreation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Target Name="CopyOutputs" Inputs="@(BuiltAssemblies)" Outputs="@(BuiltAssemblies -> '$(OutputPath)%(Filename)%(Extension)')">
+    <Copy SourceFiles="@(BuiltAssemblies)" DestinationFolder="$(OutputPath)" />
+  </Target>
+  <Target Name="RemoveTranslationsAfterBuild" AfterTargets="AfterBuild">
+    <RemoveDir Directories="@(FluentValidationExcludedCultures->'$(OutputPath)%(Filename)')" />
+  </Target>
+  <Target Name="RemoveTranslationsAfterPackage" AfterTargets="AfterPackage">
+    <RemoveDir Directories="@(FluentValidationExcludedCultures->'$(_PackageTempDir)\$(OutputPath)%(Filename)')" />
+  </Target>
+  <Target Name="Messages">
+    <Message Text="rootdir: @(Schema->'%(rootdir)')" />
+    <Message Text="fullpath: @(Schema->'%(fullpath)')" />
+    <Message Text="rootdir + directory + filename + extension: @(Schema->'%(rootdir)%(directory)%(filename)%(extension)')" />
+    <Message Text="identity: @(Schema->'%(identity)')" />
+    <Message Text="filename: @(Schema->'%(filename)')" />
+    <Message Text="directory: @(Schema->'%(directory)')" />
+    <Message Text="relativedir: @(Schema->'%(relativedir)')" />
+    <Message Text="extension: @(Schema->'%(extension)')" />
+  </Target>
+  <Target Name="BeforeBuild">
+    <Exec Command="xcopy &quot;$(ProjectDir)Images\*.*&quot; &quot;$(ProjectDir)bin\$(Configuration)\Images&quot; /Y /I /E" />
+  </Target>
+  <!--<Target Name="Compile">
+    <Exec Command="xcopy &quot;$(ProjectDir)MCD_FileUploads\*.*&quot; &quot;$(ProjectDir)bin\$(Configuration)\MCD_FileUploads&quot; /Y /I /E" />
+  </Target>!-->
+  <Target Name="AfterBuild">
+    <Exec Command="xcopy &quot;$(ProjectDir)KeyComponentData\*.*&quot; &quot;$(ProjectDir)bin\$(Configuration)\KeyComponentData&quot; /Y /I /E">
+    </Exec>
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y $(ProjectDir)AppSetting.ini  $(ProjectDir)$(OutDir)
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
